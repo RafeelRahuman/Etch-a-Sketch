@@ -8,20 +8,26 @@
     
 </head>
 <body>
+    
 
+    <div class="main-wrapper">
     <div class="controls">
         <button id = "sizeButton">Grid Number</button>
         <label for = "colorPicker">Colour Grid</label>
-
         <input type = "color" id="colorPicker" value="#123456">
+        <button id = "blackButton">Default Colour</button>
+        <button id = "colorButton">Rainbow Colour</button>
+        <button id = "eraseButton">Eraser</button>
+        <button id = "clearButton">Clear</button>
+    </div>
+    <div class="right-section">
 
-        <button id = "blackButton">Default Grid</button>
-        <button id = "colorButton">Rainbow Grid</button>
-        <button id = "eraseButton">Erase Grid</button>
-        <button id = "clearButton">Clear Grid</button>
+    <p class="instructions">Click one time to take pen inside
+         sketch box then Draw </p>
+    <div id="container" class="square"></div>
+    </div>
     </div>
 
-    <div id="container" class="square"><h1>Choose Your Grid Size</h1></div>
     <script src="sketch.js"></script>
 </body>
 </html>

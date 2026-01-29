@@ -3,9 +3,17 @@ body {
     align-items: center;
     justify-content: center;
     background-color: wheat;
+    min-height: 100vh;
     
 }
 
+.main-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
 
 
 #container {
@@ -15,15 +23,11 @@ body {
     height: 460px;
     border: 2px solid black;
     margin: 0 auto;
-    margin-top: 50px;
     background-color: white;
-
+    user-select: none; 
     
 }
 
-.grid-square{
-
-}
 
 .controls{
 
@@ -31,7 +35,6 @@ body {
     flex-direction: column;
     gap: 10px;    
     justify-content: center;
-    margin-left: 100px;
     background: #fff;
     padding: 30px;
     border-radius: 15px;
@@ -72,4 +75,16 @@ input[type="color"] {
 #clearButton{
     background-color: red;
     color: white;
+}
+
+
+.grid-square{
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.instructions{
+    color: #050404;
+    justify-content: end;
+    font-weight: bold;
 }

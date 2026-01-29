@@ -10,7 +10,9 @@ const erase_btn = document.querySelector("#eraseButton")
 
 let currentMode = 'black';
 
-let pickedColor = '#123456'
+let pickedColor = '#123456';
+
+let isDrawing = false;
 
 
 function createGrid(size){
@@ -24,8 +26,13 @@ function createGrid(size){
        square.style.width = sizePerSquare + "px";
        square.style.height = sizePerSquare + "px";
 
+       square.addEventListener('click', () => {
+        isDrawing = !isDrawing
+       });
+
        square.addEventListener('mouseenter', () => {
-       if(currentMode === 'black'){
+       if(isDrawing){
+        if(currentMode === 'black'){
         square.style.background = 'black';
        }
        else if(currentMode === 'random'){
@@ -40,6 +47,7 @@ function createGrid(size){
        else if(currentMode === 'erase'){
         square.style.background = 'white'
        }
+    }
     });
        
        container.appendChild(square);
